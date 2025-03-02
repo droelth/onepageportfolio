@@ -1,0 +1,138 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.contactTitle{
+    position: relative;
+}
+.contactTitle h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+}
+.contactSection{
+    display: flex;
+    gap: 150px;
+}
+.contactLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contactLeft h1{
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(270deg, #df8908 80%, #b415Ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.contactLeft p {
+    max-width: 550px;
+    color: #d8d8d8;
+    font-size: 20px;
+    line-height: 35px;   
+}
+.contactLeft p:hover{
+    background: linear-gradient(264deg, #df8908 -5%, #b415Ff 100%);
+}
+
+/*MARK: - deryaya sor renk değişimi*/
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #d8d8d8;
+    font-size: 22px;
+    
+}
+.contactDetail{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.contactDetail a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 200;
+    transition: all 0.3s ease-in-out;
+}
+
+.contactDetail a:hover {
+    background: linear-gradient(264deg, #df8908 -5%, #b415ff 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+.contactDetail p:hover {
+    background: linear-gradient(264deg, #df8908 -5%, #b415ff 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+    transform: scale(1.02);
+}
+
+.contactRight{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.contactRight label{
+    color: #d8d8d8;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.contactRight input {
+    border: none;
+    width: 700px;
+    height: 78px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #a0a0a0; 
+    font-size: 20px;
+}
+.iconImg{
+    width: 50px;
+    height: 50px;
+
+}
+.contactRight textarea{
+    width: 42rem;
+    border: none;
+    padding: 25px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 20px;
+}
+
+.contactSubmit {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #df8908 -5%, #b415Ff 100%);
+    font-size: 22px;
+    padding: 20px 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contactSubmit:hover{
+    transform: scale(1.05);
+}

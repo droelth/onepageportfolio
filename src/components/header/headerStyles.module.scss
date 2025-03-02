@@ -1,0 +1,51 @@
+.mainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 170px;
+    color: white;
+  }
+
+.video{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.navMenu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+.navItem:hover {
+    scale: 1.05;
+    color: #da7c25;
+    cursor: pointer;
+}
+
+.Logo{
+    width: 100px;
+    height: 100px;
+}
+
+.navItemConnect {
+    padding: 20px 40px;
+    border-radius: 20px;
+    background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 106%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navItemConnect:hover {
+    scale: 1.1;
+}
+
+.navMenu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}

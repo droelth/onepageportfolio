@@ -1,0 +1,67 @@
+.imageString{
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    gap: 80px
+}
+
+.mediumTitle{
+    font-size: 60px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    padding-bottom: 80px;
+    
+}
+.video{
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.mediumContainer{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr);   /* 2 rows */
+  gap: 10px; /* Adjust spacing between grid items */
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 30px;
+}
+
+.mediumItem:hover{
+    background: linear-gradient(270deg, #df8908 80%, #b415Ff 100%);
+    transform: scale(1.03);
+}
+
+.mediumItem{
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+.mediumItem h3{
+    font-size: 30px;
+    font-weight: 500;
+    height: 50px;
+}
+
+.mediumItem p {
+    font-size: 22px;
+    font-weight: 400;
+    height: 50px;
+    padding-top: 30px;
+}
+
+.mediumItem a {
+    font-size: 30px;
+    font-weight: 450px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+.mainContainer {
+    background-color: #181818; /* Dark background */
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    border-top: 2px solid #333; /* Subtle top border */
+  }
+  
+  /* Left section: Logo */
+  .leftContainer img {
+    height: 70px; /* Adjust logo size */
+    width: 70px;
+    object-fit: contain;
+  }
+  
+  /* Social links container */
+  .socials ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+    padding: 0;
+  }
+  
+  .socials li {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Style for social media links */
+  .socials a {
+    text-decoration: none;
+    color: #d8d8d8;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+
+  .socials a:hover {
+    color: #b415ff; /* Change color on hover */
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .leftContainer img {
+      margin-bottom: 10px;
+    }
+  
+    .socials ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
