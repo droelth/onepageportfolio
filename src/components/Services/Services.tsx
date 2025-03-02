@@ -1,10 +1,13 @@
 import Styles from "./ServicesStyles.module.scss";
 import Services_Data from "../../assets/services";
-import { useRef } from "react";
+import { FC,Ref } from "react";
 
-const Services = () => {
+interface servicesProps{
+  servicesRef: Ref<HTMLDivElement>
+}
 
-  const servicesRef = useRef(null);
+const Services: FC<servicesProps> = ({servicesRef}) => {
+
   return (
     <div ref={servicesRef} className={Styles.services}>
       <div className={Styles.servicesTitle}>
@@ -17,10 +20,7 @@ const Services = () => {
               <h3>{service.s_no}</h3>
               <h2>{service.s_name}</h2>
               <p>{service.s_desc}</p>
-              <div className={Styles.servicesReadmore}>
-                <p>Read More</p>
-                <img src="" alt="" />
-              </div>
+              
             </div>
           );
         })}

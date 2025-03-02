@@ -1,10 +1,13 @@
 import Styles from "./WorksStyles.module.scss";
 import works_data from "../../assets/works";
-import { useRef } from "react";
+import { Ref, FC } from "react";
 
-const Works = () => {
+interface worksProps {
+    worksRef: Ref<HTMLDivElement>
+}
 
-  const worksRef = useRef(null);
+const Works: FC<worksProps> = ({worksRef}) => {
+
   return (
     <section ref= {worksRef}>
     <div className={Styles.worksContainers}>
@@ -13,7 +16,9 @@ const Works = () => {
       </div>
       <div className={Styles.worksContainer}>
         {works_data.map((work, index) => (
+          <a href={work.w_link}>
           <img key={index} src={work.w_img} alt={work.w_name} />
+          </a>
         ))}
       </div>
     </div>

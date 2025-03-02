@@ -1,10 +1,12 @@
 import Styles from "./MediumStyles.module.scss"
 import mediumData from "../../assets/mediumData.tsx"
-import { useRef } from "react";
+import { FC, Ref } from "react";
 
-const Medium = () => {
+interface mediumProps{
+  mediumRef: Ref<HTMLDivElement>
+}
 
-  const mediumRef = useRef(null);
+const Medium: FC<mediumProps> = ({mediumRef}) => {
 
     return (
       <div ref={mediumRef} className={Styles.fullContainer}>

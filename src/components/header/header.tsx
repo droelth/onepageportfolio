@@ -1,17 +1,28 @@
 import Styles from "./headerStyles.module.scss";
 import moon from "../../assets/loopay.mp4";
-import { useState, useRef, Ref, FC } from "react";
+import { useState, Ref, FC } from "react";
 
 interface HeaderProps {
   aboutRef: Ref<HTMLDivElement>;
 }
+interface HeaderProps {
+  homeRef: Ref<HTMLDivElement>;
+}
+interface HeaderProps {
+  servicesRef: Ref<HTMLDivElement>;
+}
+interface HeaderProps {
+  worksRef: Ref<HTMLDivElement>;
+}
+interface HeaderProps {
+  mediumRef: Ref<HTMLDivElement>;
+}
+interface HeaderProps {
+  contactRef: Ref<HTMLDivElement>;
+}
 
-const Header: FC<HeaderProps> = ({ aboutRef }) => {
+const Header: FC<HeaderProps> = ({ aboutRef, homeRef, servicesRef, worksRef, mediumRef, contactRef}) => {
   const [menu, setMenu] = useState("home");
-  const homeRef = useRef<HTMLDivElement | null>(null);
-  const servicesRef = useRef<HTMLDivElement | null>(null);
-  const worksRef = useRef<HTMLDivElement | null>(null);
-  const mediumRef = useRef<HTMLDivElement | null>(null);
 
   return (
     <div className={Styles.mainContainer}>
@@ -29,7 +40,7 @@ const Header: FC<HeaderProps> = ({ aboutRef }) => {
           <p
             onClick={() => {
               setMenu("home");
-              homeRef.current?.scrollIntoView();
+              homeRef?.current?.scrollIntoView({ behavior: "smooth" });
             }}
             style={
               menu === "home"
@@ -59,7 +70,7 @@ const Header: FC<HeaderProps> = ({ aboutRef }) => {
           <p
             onClick={() => {
               setMenu("services");
-              servicesRef.current?.scrollIntoView();
+              servicesRef?.current?.scrollIntoView();
             }}
             style={
               menu === "services"
@@ -74,7 +85,7 @@ const Header: FC<HeaderProps> = ({ aboutRef }) => {
           <p
             onClick={() => {
               setMenu("works");
-              worksRef.current?.scrollIntoView();
+              worksRef?.current?.scrollIntoView();
             }}
             style={
               menu === "works"
@@ -89,7 +100,7 @@ const Header: FC<HeaderProps> = ({ aboutRef }) => {
           <p
             onClick={() => {
               setMenu("medium");
-              mediumRef.current?.scrollIntoView();
+              mediumRef?.current?.scrollIntoView();
             }}
             style={
               menu === "medium"
@@ -102,7 +113,11 @@ const Header: FC<HeaderProps> = ({ aboutRef }) => {
         </li>
       </ul>
 
-      <div className={Styles.navItemConnect}>Connect</div>
+      <div className={Styles.navItemConnect} onClick={() => { 
+        contactRef?.current.scrollIntoView();
+      }}>
+        Connect
+        </div>
     </div>
   );
 };

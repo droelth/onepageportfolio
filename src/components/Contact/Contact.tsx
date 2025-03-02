@@ -3,12 +3,15 @@ import Github from "../../assets/Github.png";
 import Linkedin from "../../assets/Linkedin.png";
 import Mail from "../../assets/Mail.png";
 import Instagram from "../../assets/Instagram.png";
-import { useRef } from "react";
+import { FC, Ref } from "react";
 
-const Contact = () => {
 
-  const contactRef = useRef(null);
+interface contactProps {
+  contactRef: Ref<HTMLDivElement>;
+}
 
+
+const Contact: FC<contactProps> = ({ contactRef }) => {
 
   return (
     <div ref={contactRef} className={Styles.contact}>

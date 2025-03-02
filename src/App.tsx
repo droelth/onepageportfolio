@@ -17,6 +17,8 @@ const App = () => {
   const servicesRef = useRef<HTMLDivElement | null>(null);
   const worksRef = useRef<HTMLDivElement | null>(null);
   const mediumRef = useRef<HTMLDivElement | null>(null);
+  const contactRef = useRef<HTMLDivElement | null>(null);
+
 
   return (
     <div>
@@ -25,13 +27,13 @@ const App = () => {
       )}
       {showMainContent && (
         <>
-          <HeaderView aboutRef={aboutRef} />
-          <HeroView />
+          <HeaderView aboutRef={aboutRef} homeRef={homeRef} contactRef={contactRef} servicesRef={servicesRef} worksRef={worksRef} mediumRef={mediumRef}/>
+          <HeroView homeRef={homeRef}/>
           <AboutView aboutRef={aboutRef} />
-          <Services />
-          <Works />
-          <Medium />
-          <Contact />
+          <Services servicesRef={servicesRef}/>
+          <Works worksRef={worksRef} />
+          <Medium mediumRef={mediumRef}/>
+          <Contact contactRef={contactRef}/>
           <Footer />
         </>
       )}

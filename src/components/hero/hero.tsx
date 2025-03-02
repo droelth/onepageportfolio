@@ -1,13 +1,16 @@
 import Styles from "./heroStyles.module.scss";
 import profilePicture from "../../assets/profile.jpeg";
-import { useRef } from "react";
+import { FC, Ref } from "react";
 
-const Hero = () => {
-  const homeRef = useRef(null);
-console.log(homeRef)
+interface heroProps {
+  homeRef: Ref<HTMLDivElement>
+}
+
+
+const Hero: FC<heroProps> = ({ homeRef }) => {
+  
   return (
-    <section ref={homeRef}>
-    <div className={Styles.hero}>
+    <div ref={homeRef} className={Styles.hero}>
       <img src={profilePicture} alt="" className={Styles.heroImg} />
       <h1>
         <span>Hi, I'm Berkay Sütlü,</span> iOS developer based in Istanbul
@@ -21,7 +24,6 @@ console.log(homeRef)
         <div className={Styles.heroResume}>My Resume</div>
       </div>
     </div>
-    </section>
   );
 };
 
