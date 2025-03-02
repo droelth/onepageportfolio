@@ -1,10 +1,13 @@
 import Styles from "./AboutStyles.module.scss";
-import { useRef } from "react";
-import profileImg from "../../assets/profile.jpeg";
-const About = () => {
-  const aboutRef = useRef<HTMLDivElement | null>(null);
 
-  
+import profileImg from "../../assets/profile.jpeg";
+import { FC, Ref } from "react";
+
+interface AboutProps {
+  aboutRef: Ref<HTMLDivElement>;
+}
+
+const About: FC<AboutProps> = ({ aboutRef }) => {
   return (
     <div ref={aboutRef} className={Styles.about}>
       <div className={Styles.aboutTitle}>

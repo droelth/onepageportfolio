@@ -1,12 +1,14 @@
 import Styles from "./headerStyles.module.scss";
 import moon from "../../assets/loopay.mp4";
-import { useState, useRef } from "react";
+import { useState, useRef, Ref, FC } from "react";
 
-const Header = () => {
+interface HeaderProps {
+  aboutRef: Ref<HTMLDivElement>;
+}
 
+const Header: FC<HeaderProps> = ({ aboutRef }) => {
   const [menu, setMenu] = useState("home");
   const homeRef = useRef<HTMLDivElement | null>(null);
-  const aboutRef = useRef<HTMLDivElement | null>(null);
   const servicesRef = useRef<HTMLDivElement | null>(null);
   const worksRef = useRef<HTMLDivElement | null>(null);
   const mediumRef = useRef<HTMLDivElement | null>(null);
@@ -27,7 +29,7 @@ const Header = () => {
           <p
             onClick={() => {
               setMenu("home");
-              homeRef.current?.scrollIntoView()
+              homeRef.current?.scrollIntoView();
             }}
             style={
               menu === "home"
@@ -42,7 +44,7 @@ const Header = () => {
           <p
             onClick={() => {
               setMenu("about");
-              aboutRef.current?.scrollIntoView()
+              aboutRef?.current?.scrollIntoView({ behavior: "smooth" });
             }}
             style={
               menu === "about"
@@ -57,7 +59,7 @@ const Header = () => {
           <p
             onClick={() => {
               setMenu("services");
-              servicesRef.current?.scrollIntoView()
+              servicesRef.current?.scrollIntoView();
             }}
             style={
               menu === "services"
@@ -72,7 +74,7 @@ const Header = () => {
           <p
             onClick={() => {
               setMenu("works");
-              worksRef.current?.scrollIntoView()
+              worksRef.current?.scrollIntoView();
             }}
             style={
               menu === "works"
@@ -87,7 +89,7 @@ const Header = () => {
           <p
             onClick={() => {
               setMenu("medium");
-              mediumRef.current?.scrollIntoView()
+              mediumRef.current?.scrollIntoView();
             }}
             style={
               menu === "medium"
